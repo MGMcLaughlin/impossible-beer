@@ -21,33 +21,33 @@ http.createServer(function (req, res) {
 
 
 
-//     if(email != undefined){
+    if(email != undefined){
 
-//         var nodemailer = require('nodemailer');
+        var nodemailer = require('nodemailer');
 
-//         var transporter = nodemailer.createTransport({
-//             service: 'gmail',
-//             auth: {
-//                 user: 'theimpossiblebrewquiz@gmail.com',
-//                 pass: 'demouser123'
-//             }
-//         });
+        var transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: 'theimpossiblebrewquiz@gmail.com',
+                pass: 'demouser123'
+            }
+        });
 
-//         var mailOptions = {
-//             from: 'theimpossiblebrewquiz@gmail.com',
-//             to: email,
-//             subject: 'The Impossible Beer Quiz',
-//             html: likedBeers
-//         };
+        var mailOptions = {
+            from: 'theimpossiblebrewquiz@gmail.com',
+            to: email,
+            subject: 'The Impossible Beer Quiz',
+            html: likedBeers
+        };
 
-//         transporter.sendMail(mailOptions, function(error, info){
-//             if (error) {
-//                 console.log(error);
-//             } else {
-//                 console.log('Email sent: ' + info.response);
-//             }
-//         });
-//     }
+        transporter.sendMail(mailOptions, function(error, info){
+            if (error) {
+                console.log(error);
+            } else {
+                console.log('Email sent: ' + info.response);
+            }
+        });
+    }
 
 
     //TODO: Style all of this
@@ -77,9 +77,11 @@ http.createServer(function (req, res) {
 
     res.write('<body><header id="header"><div id="username">' + user + '</div><h1>The Impossible Brew Quiz</h1></header>');
     res.write('<div id="liked-form"></div>');
+//https://mgmclaughlin.github.io/impossible-beer/
+//     res.write("<div id='score'>Your Final Score - " + score + '<br><br><a class="try_again" href="https://patmgaughan.github.io/Final-Project-Brew-Buddies/">Play Again!</a><br></div>');
+    res.write("<div id='score'>Your Final Score - " + score + '<br><br><a class="try_again" href="https://mgmclaughlin.github.io/impossible-beer/">Play Again!</a><br></div>');
 
-    res.write("<div id='score'>Your Final Score - " + score + '<br><br><a class="try_again" href="https://patmgaughan.github.io/Final-Project-Brew-Buddies/">Play Again!</a><br></div>');
-    //res.write('<a class="try_again" href="https://patmgaughan.github.io/Final-Project-Brew-Buddies/">Try Again!</a>');
+	//res.write('<a class="try_again" href="https://patmgaughan.github.io/Final-Project-Brew-Buddies/">Try Again!</a>');
     res.write("<h2>High Scores:</h2>");
 
 
