@@ -21,33 +21,33 @@ http.createServer(function (req, res) {
 
 
 
-//     if(email != undefined){
+    if(email != undefined){
 
-//         var nodemailer = require('nodemailer');
+        var nodemailer = require('nodemailer');
 
-//         var transporter = nodemailer.createTransport({
-//             service: 'gmail',
-//             auth: {
-//                 user: 'theimpossiblebrewquiz@gmail.com',
-//                 pass: 'demouser123'
-//             }
-//         });
+        var transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: 'theimpossiblebrewquiz@gmail.com',
+                pass: 'demouser123'
+            }
+        });
 
-//         var mailOptions = {
-//             from: 'theimpossiblebrewquiz@gmail.com',
-//             to: email,
-//             subject: 'The Impossible Beer Quiz',
-//             html: likedBeers
-//         };
+        var mailOptions = {
+            from: 'theimpossiblebrewquiz@gmail.com',
+            to: email,
+            subject: 'The Impossible Beer Quiz',
+            html: likedBeers
+        };
 
-//         transporter.sendMail(mailOptions, function(error, info){
-//             if (error) {
-//                 console.log(error);
-//             } else {
-//                 console.log('Email sent: ' + info.response);
-//             }
-//         });
-//     }
+        transporter.sendMail(mailOptions, function(error, info){
+            if (error) {
+                console.log(error);
+            } else {
+                console.log('Email sent: ' + info.response);
+            }
+        });
+    }
 
 
     //TODO: Style all of this
