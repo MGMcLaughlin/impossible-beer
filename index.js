@@ -1,5 +1,6 @@
 var http = require('http');
 var url = require('url');
+var port = process.env.PORT | 3000;
 
 http.createServer(function (req, res) {
     console.log("HOUSTON WE HAVE CREATED THE SERVER");
@@ -202,7 +203,7 @@ http.createServer(function (req, res) {
     // }
     // end of liked beers
 
-}).listen(8080);
+}).listen(port);
 
 
 function showBeerJSON(beer){
