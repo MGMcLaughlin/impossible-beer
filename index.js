@@ -21,33 +21,33 @@ http.createServer(function (req, res) {
 
 
 
-    if(email != undefined){
+//     if(email != undefined){
 
-        var nodemailer = require('nodemailer');
+//         var nodemailer = require('nodemailer');
 
-        var transporter = nodemailer.createTransport({
-            service: 'gmail',
-            auth: {
-                user: 'theimpossiblebrewquiz@gmail.com',
-                pass: 'demouser123'
-            }
-        });
+//         var transporter = nodemailer.createTransport({
+//             service: 'gmail',
+//             auth: {
+//                 user: 'theimpossiblebrewquiz@gmail.com',
+//                 pass: 'demouser123'
+//             }
+//         });
 
-        var mailOptions = {
-            from: 'theimpossiblebrewquiz@gmail.com',
-            to: email,
-            subject: 'The Impossible Beer Quiz',
-            html: likedBeers
-        };
+//         var mailOptions = {
+//             from: 'theimpossiblebrewquiz@gmail.com',
+//             to: email,
+//             subject: 'The Impossible Beer Quiz',
+//             html: likedBeers
+//         };
 
-        transporter.sendMail(mailOptions, function(error, info){
-            if (error) {
-                console.log(error);
-            } else {
-                console.log('Email sent: ' + info.response);
-            }
-        });
-    }
+//         transporter.sendMail(mailOptions, function(error, info){
+//             if (error) {
+//                 console.log(error);
+//             } else {
+//                 console.log('Email sent: ' + info.response);
+//             }
+//         });
+//     }
 
 
     //TODO: Style all of this
@@ -92,10 +92,10 @@ http.createServer(function (req, res) {
     const mongoClient = require('mongodb').MongoClient;
     console.log("attention");
     //note const url2 is PATRICK
-    const url2 = "mongodb+srv://demouser:demouser123@cluster0.2ea3z.mongodb.net/beer_quiz?retryWrites=true&w=majority";
+   // const url2 = "mongodb+srv://demouser:demouser123@cluster0.2ea3z.mongodb.net/beer_quiz?retryWrites=true&w=majority";
     // note  url3 is MADELIME
     // change on below line
-    url3 = "mongodb+srv://tempuser:heylookitsMONGODB2001@cluster0.f5arw.mongodb.net/final-project?retryWrites=true&w=majority";
+    const url3 = "mongodb+srv://tempuser:heylookitsMONGODB2001@cluster0.f5arw.mongodb.net/final-project?retryWrites=true&w=majority";
     console.log("earthlings");
     console.log("Mongo url Connected");
 
