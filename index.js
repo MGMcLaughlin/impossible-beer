@@ -98,7 +98,7 @@ http.createServer(function (req, res) {
     console.log("earthlings");
     console.log("Mongo url Connected");
 
-    mongoClient.connect(url2, { useUnifiedTopology: true }, function(err, db) {
+    mongoClient.connect(url3, { useUnifiedTopology: true }, function(err, db) {
         console.log("CONNECTING CONNECTING CONNECTION CONNECTION NOT AMISSEDCONNECTION\n\n\n");
         if(err) { return console.log(err); }
 
